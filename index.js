@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 const all = require('./middlewares/index');
 const users = require('./middlewares/users/index');
 
-app.get('/', root.getHello);
+app.get('/', all.getHello);
 app.post('/register', users.register);
 app.post('/login', users.login);
 app.get('/users', users.getAllUsers);
