@@ -16,7 +16,7 @@ const User = mongoose.model('User', {
 
 module.exports = {
   register: async (req, res) => {
-    // using the slow process is a slow process, so we use await
+    // using the slow process is a slow process, then we use await
     // destructure salt & password from encryptPassword() function
     const { salt, hashedPassword } = await helpers.encryptPassword(
       req.body.password
